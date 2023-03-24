@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+.container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: auto 5% auto 15%;
+    height: 400px;
+    width: 400px;
+    background-color: #000;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    text-align: center;
+    color: aquamarine;
+}
+
+.cel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #000;
+    font-size: 4.5em;
+}
+
+.cel:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.center {
+    text-align: center;
+    margin: 1.5em 0;
+    color: aquamarine;
+}
+
+.d-none {
+    display: none;
+}
+
+button {
+    font-weight: bold;
+    background-color: black;
+    border: solid 1px white;
+    color: white;
+}
+
+button:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+#restart {
+    padding: 1.2em;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+#cel-1 {
+    border-right: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+}
+
+#cel-2 {
+    border-right: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+    border-left: 1px solid aquamarine;
+}
+
+#cel-3 {
+    border-bottom: 1px solid aquamarine;
+    border-left: 1px solid aquamarine;
+}
+
+#cel-4 {
+    border-top: 1px solid aquamarine;
+    border-right: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+}
+
+#cel-5 {
+    border: 1px solid aquamarine;
+
+}
+
+#cel-6 {
+    border-top: 1px solid aquamarine;
+    border-left: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+}
+
+#cel-7 {
+    border-top: 1px solid aquamarine;
+    border-right: 1px solid aquamarine;
+}
+
+#cel-8 {
+    border-top: 1px solid aquamarine;
+    border-left: 1px solid aquamarine;
+    border-right: 1px solid aquamarine;
+}
+
+#cel-9 {
+    border-top: 1px solid aquamarine;
+    border-left: 1px solid rgb(12, 255, 212);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#container-score {
+    margin: 0 15% 0 5%;
+}
+
+#div-score {
+    text-align: center;
+    color: aquamarine;
+    margin-bottom: 3em;
+}
+
+#div-players {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player {
+    padding: 1em;
+    width: 150px;
+    text-align: center;
+    border-left: 1px solid aquamarine;
+    border-right: 1px solid aquamarine;
+    color: aquamarine;
+}

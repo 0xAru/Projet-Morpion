@@ -1,0 +1,6 @@
+Première étape :
+	1-Afficher la grille
+	2-Au click, afficher une croix et un rond alternativement
+	3-Victoire
+
+	4- mettre en place le jeu en solo contre le CPU
