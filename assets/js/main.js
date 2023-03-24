@@ -1,3 +1,7 @@
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 let joueurOne = "X";
 let joueurTwo = "O";
 let tour = 1;
@@ -22,7 +26,6 @@ function play(elem) {
         updateGrid()
     }
 }
-
 
 function updateGrid() {
     let index = 0
@@ -87,7 +90,6 @@ function restart() {
         elem.innerHTML = ""
     })
 }
-
 
 function score(winner) {
     if (winner == "X") {
