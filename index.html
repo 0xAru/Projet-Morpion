@@ -14,6 +14,9 @@
         <h1>Morpion</h1>
     </header>
     <main>
+        <div id = "soloGame">
+            <button onclick="chooseMode()">Mode Solo</button>
+        </div>
         <div class="container" id="grid">
             <div class="cel" id="cel-1" onclick="play(this)"></div>
             <div class="cel" id="cel-2" onclick="play(this)"></div>
@@ -37,7 +40,7 @@
             </div>
             <div id="score" class="center"></div>
             <div class="center">
-                <button id="restart" class="d-none" onclick="restart()">Rejouer</button>
+                <button id="restart" class="d-none button" onclick="restart()">Rejouer</button>
             </div>
         </div>
     </main>

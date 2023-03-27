@@ -53,17 +53,14 @@ button {
     background-color: black;
     border: solid 1px white;
     color: white;
+    padding: 1.2em;
+    border-radius: 10px;
+    letter-spacing: 1px;
 }
 
 button:hover {
     background-color: aquamarine;
     color: black;
-}
-
-#restart {
-    padding: 1.2em;
-    border-radius: 10px;
-    letter-spacing: 1px;
 }
 
 #cel-1 {

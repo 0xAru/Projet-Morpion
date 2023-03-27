@@ -4,6 +4,7 @@ function random(min, max) {
 
 let joueurOne = "X";
 let joueurTwo = "O";
+let soloGame = false;
 let tour = 1;
 let gameOver = false;
 let scoreOne = 0;
@@ -14,16 +15,32 @@ let tableau = [
     ["", "", ""]
 ]
 
+function chooseMode() {
+    soloGame = true;
+    document.querySelector("#soloGame").style.display = "none"
+}
+
+function againstCPU() {
+    let randomIndex = random(0, 8);
+    let container = document.querySelectorAll(".cel");
+    while (container[randomIndex].innerHTML != "") {
+        randomIndex = random(0, 8);
+    }
+    container[randomIndex].innerHTML = "O";
+    updateGrid()
+}
 
 function play(elem) {
     if (gameOver == false && elem.innerHTML == "") {
         if (tour % 2 != 0) {
             elem.innerHTML = joueurOne
-        } else {
+        } else if (tour % 2 == 0 && soloGame == false) {
             elem.innerHTML = joueurTwo
         }
-        tour++
         updateGrid()
+        if (soloGame == true && tour % 2 == 0 && tour < 10) {
+            againstCPU()
+        }
     }
 }
 
@@ -35,6 +52,7 @@ function updateGrid() {
             index++
         }
     }
+    tour++
     result(tableau)
     console.log(tableau);
 }
@@ -79,7 +97,6 @@ function result(tableau) {
     }
     score()
 }
-
 
 function restart() {
     gameOver = false;
