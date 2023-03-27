@@ -38,7 +38,7 @@ function play(elem) {
             elem.innerHTML = joueurTwo
         }
         updateGrid()
-        if (soloGame == true && tour % 2 == 0 && tour < 10) {
+        if (soloGame == true && tour % 2 == 0 && tour < 10 && gameOver == false) {
             againstCPU()
         }
     }
@@ -54,7 +54,6 @@ function updateGrid() {
     }
     tour++
     result(tableau)
-    console.log(tableau);
 }
 
 function result(tableau) {
