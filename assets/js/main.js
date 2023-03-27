@@ -57,28 +57,28 @@ function updateGrid() {
 }
 
 function result(tableau) {
-    let playerWin = ""
+    let winner = ""
     for (let i = 0; i < tableau.length; i++) {
         if (tableau[i][0] != "" && tableau[i][0] == tableau[i][1] && tableau[i][1] == tableau[i][2]) {
-            playerWin = tableau[i][0]
+            winner = tableau[i][0]
             document.querySelector("#score").innerHTML = tableau[i][0] + " a gagné ! Jeu terminé"
             document.querySelector("#restart").classList.remove("d-none")
             gameOver = true
         }
         if (tableau[0][i] != "" && tableau[0][i] == tableau[1][i] && tableau[1][i] == tableau[2][i]) {
-            playerWin = tableau[0][i]
+            winner = tableau[0][i]
             document.querySelector("#score").innerHTML = tableau[0][i] + " a gagné ! Jeu terminé"
             document.querySelector("#restart").classList.remove("d-none")
             gameOver = true
         }
         if (tableau[0][0] != "" && tableau[0][0] == tableau[1][1] && tableau[1][1] == tableau[2][2]) {
-            playerWin = tableau[0][0]
+            winner = tableau[0][0]
             document.querySelector("#score").innerHTML = tableau[0][0] + " a gagné ! Jeu terminé"
             document.querySelector("#restart").classList.remove("d-none")
             gameOver = true
         }
         if (tableau[0][2] != "" && tableau[0][2] == tableau[1][1] && tableau[1][1] == tableau[2][0]) {
-            playerWin = tableau[0][2]
+            winner = tableau[0][2]
             document.querySelector("#score").innerHTML = tableau[0][2] + " a gagné ! Jeu terminé"
             document.querySelector("#restart").classList.remove("d-none")
             gameOver = true
@@ -86,7 +86,7 @@ function result(tableau) {
     }
 
     if (gameOver) {
-        score(playerWin)
+        score(winner)
     }
 
     if (tour == 10 && gameOver == false) {
