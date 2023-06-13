@@ -16,8 +16,15 @@ let tableau = [
 ]
 
 function chooseMode() {
-    soloGame = true;
-    document.querySelector("#soloGame").style.display = "none"
+    soloGame = !soloGame;
+    document.querySelector("#scoreOne").innerHTML = 0;
+    document.querySelector("#scoreTwo").innerHTML = 0;
+    restart();
+    if (soloGame) {
+        document.querySelector("#soloGame").querySelector("button").innerHTML = "Mode 2 joueurs"; 
+    }else{
+        document.querySelector("#soloGame").querySelector("button").innerHTML = "Mode Solo"; 
+    }
 }
 
 function againstCPU() {
