@@ -17,6 +17,8 @@ let tableau = [
 
 function chooseMode() {
     soloGame = !soloGame;
+    scoreOne = 0;
+    scoreTwo = 0;
     document.querySelector("#scoreOne").innerHTML = 0;
     document.querySelector("#scoreTwo").innerHTML = 0;
     restart();
